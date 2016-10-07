@@ -28,6 +28,15 @@
     [locationManager requestWhenInUseAuthorization];
     [locationManager startUpdatingLocation];
 //    locationManager.delegate = self;
+    
+    //здесь мы добавляем кастомную координату на карту (устанавливаем на нее маркер )
+    CLLocationCoordinate2D restOneCoordinates = CLLocationCoordinate2DMake(53.909114, 27.555841);
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    [annotation setCoordinate:restOneCoordinates];
+    [annotation setTitle:@"Rest"];
+    [annotation setSubtitle:@"One"];
+    [self.mapView addAnnotation:annotation];
+
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
@@ -43,6 +52,17 @@
     point.subtitle = @"I'm here!!!";
     
     [self.mapView addAnnotation:point];
+}
+
+//по этой кнопке осуществляется переход на какую-то прописанную точку
+- (IBAction)showAddressBtn:(UIButton *)sender {
+    //создаем координату
+    CLLocationCoordinate2D restOneCoordinates = CLLocationCoordinate2DMake(53.910549,27.557752);
+    
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(restOneCoordinates, 50000, 50000);
+    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
+
+    
 }
 
 @end
