@@ -13,6 +13,8 @@
 		16FC62BC1DA7E8BA00CA81DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FC62BA1DA7E8BA00CA81DF /* Main.storyboard */; };
 		16FC62BE1DA7E8BA00CA81DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16FC62BD1DA7E8BA00CA81DF /* Assets.xcassets */; };
 		16FC62C11DA7E8BA00CA81DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FC62BF1DA7E8BA00CA81DF /* LaunchScreen.storyboard */; };
+		16FC62CE1DA7F05700CA81DF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16FC62CD1DA7F05700CA81DF /* CoreLocation.framework */; };
+		16FC62D01DA7F05C00CA81DF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16FC62CF1DA7F05C00CA81DF /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		16FC62BD1DA7E8BA00CA81DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16FC62C01DA7E8BA00CA81DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16FC62C21DA7E8BA00CA81DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16FC62CD1DA7F05700CA81DF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		16FC62CF1DA7F05C00CA81DF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16FC62D01DA7F05C00CA81DF /* MapKit.framework in Frameworks */,
+				16FC62CE1DA7F05700CA81DF /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,8 @@
 		16FC62A51DA7E8BA00CA81DF = {
 			isa = PBXGroup;
 			children = (
+				16FC62CF1DA7F05C00CA81DF /* MapKit.framework */,
+				16FC62CD1DA7F05700CA81DF /* CoreLocation.framework */,
 				16FC62B01DA7E8BA00CA81DF /* MapKitExample */,
 				16FC62AF1DA7E8BA00CA81DF /* Products */,
 			);
@@ -298,6 +306,7 @@
 				16FC62C71DA7E8BA00CA81DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
